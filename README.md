@@ -37,8 +37,8 @@ Plataforma completa de checkout e pós-venda voltada para processamento de pagam
 
 1. **Clone o repositório:**
    ```bash
-   mkdir cw-mp
-   git clone [https://github.com/Crowtz/Full-Stack-Checkout-Platform-Spring-Boot-MySQL-Docker.git](https://github.com/Crowtz/Full-Stack-Checkout-Platform-Spring-Boot-MySQL-Docker.git)
+   git clone https://github.com/Crowtz/Full-Stack-Checkout-Platform-Spring-Boot-MySQL-Docker-
+   cd Full-Stack-Checkout-Platform-Spring-Boot-MySQL-Docker-
 
 2. **Configuração do Ambiente (.env)**
    ```bash
