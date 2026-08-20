@@ -37,25 +37,27 @@ Plataforma completa de checkout e pós-venda voltada para processamento de pagam
 
 1. **Clone o repositório:**
    ```bash
+   mkdir cw-mp
    git clone [https://github.com/Crowtz/Full-Stack-Checkout-Platform-Spring-Boot-MySQL-Docker.git](https://github.com/Crowtz/Full-Stack-Checkout-Platform-Spring-Boot-MySQL-Docker.git)
-   cd Full-Stack-Checkout-Platform-Spring-Boot-MySQL-Docker
 
-2. **Clone o repositório:**
-   ```bash Configuração do Ambiente (.env)
+2. **Configuração do Ambiente (.env)**
+   ```bash
    Localize o arquivo .env (ou crie-o a partir do .env.example).
    Abra o arquivo com um editor (ex: nano ou vim): nano .env
-
    Preencha as variáveis de ambiente com os dados corretos (IP da VPS, senha de admin e tokens do Mercado Pago).
-
-   4. Ajuste de Permissões
+   
+3. **Ajuste de Permissões**
+   ```bash
    Para garantir que o Docker consiga ler e escrever nos volumes de dados do projeto:
    sudo chmod -R 775 .
-   
-   5. Inicializando a Aplicação
+
+4. **Inicializando a Aplicação**
+   ```bash
    Suba o ambiente em modo de segundo plano (background):
    docker compose up -d --build
-   
-   6. Manutenção e Reinicialização
+
+5. **Manutenção e Reinicialização**
+   ```bash
    Sempre que fizer alterações no arquivo .env ou atualizar o código, reinicie os containers:
    Parar e limpar volumes: docker compose down -v
    Subir novamente: docker compose up -d --build
