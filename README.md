@@ -30,7 +30,8 @@ Plataforma completa de checkout e pós-venda voltada para processamento de pagam
 ## Como Rodar o Projeto
 
 ### Pré-requisitos
-* [Docker Desktop](https://www.docker.com/products/docker-desktop/) instalado e em execução.
+* [Docker Windows](https://docs.docker.com/desktop/setup/install/windows-install/) instalado e em execução.
+* [Docker Linux](https://docs.docker.com/engine/install/ubuntu/) instalado e em execução.
 
 ### Passo a Passo
 
