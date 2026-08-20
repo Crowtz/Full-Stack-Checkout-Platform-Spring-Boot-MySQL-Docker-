@@ -12,7 +12,7 @@ Plataforma completa de checkout e pós-venda voltada para processamento de pagam
 Confira a aplicação em funcionamento e as principais telas da plataforma.
 
 ### Vídeo Demonstrativo
-[![Assista ao vídeo](https://img.youtube.com/vi/SEU_VIDEO_ID/maxresdefault.jpg)](https://www.youtube.com/watch?v=SEU_VIDEO_ID)
+[Assista ao vídeo] (https://www.youtube.com/watch?v=TtGWXCJFNNE)
 > 💡 *Clique na imagem acima para assistir ao fluxo completo no YouTube.*
 
 ---
