@@ -40,7 +40,8 @@ Plataforma completa de checkout e pós-venda voltada para processamento de pagam
    git clone [https://github.com/Crowtz/Full-Stack-Checkout-Platform-Spring-Boot-MySQL-Docker.git](https://github.com/Crowtz/Full-Stack-Checkout-Platform-Spring-Boot-MySQL-Docker.git)
    cd Full-Stack-Checkout-Platform-Spring-Boot-MySQL-Docker
 
-   3. Configuração do Ambiente (.env)
+2. **Clone o repositório:**
+   ```bash Configuração do Ambiente (.env)
    Localize o arquivo .env (ou crie-o a partir do .env.example).
    Abra o arquivo com um editor (ex: nano ou vim): nano .env
 
