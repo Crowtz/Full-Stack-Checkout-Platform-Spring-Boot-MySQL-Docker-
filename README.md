@@ -16,8 +16,8 @@ Plataforma completa de checkout e pós-venda voltada para processamento de pagam
 ## 📸 Capturas de Tela
 
 <div align="center">
-  <img src="./docs/screenshots/checkout.png" alt="Tela de Checkout" width="45%">
-  <img src="./docs/screenshots/dashboard.png" alt="Painel Administrativo" width="45%">
+  <img src="1.png" alt="Tela de Checkout" width="45%">
+  <img src="2.png" alt="Painel Administrativo" width="45%">
 </div>
 
 ---
