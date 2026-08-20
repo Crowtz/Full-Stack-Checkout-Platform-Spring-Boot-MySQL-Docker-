@@ -1,0 +1,79 @@
+services:
+  # --------------------------------------------------------
+  # 1. Banco de Dados MySQL
+  # --------------------------------------------------------
+  database:
+    image: mysql:8.0
+    container_name: checkout_db
+    restart: always
+    environment:
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    ports:
+      - "${PORT_MYSQL}:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  # --------------------------------------------------------
+  # 2. Backend Spring Boot (Java 17)
+  # --------------------------------------------------------
+  backend:
+    build: .
+    container_name: checkout_backend
+    restart: always
+    ports:
+      - "${PORT_SPRING}:8080"
+    env_file:
+      - .env
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://database:3306/${MYSQL_DATABASE}?useSSL=false&allowPublicKeyRetrieval=true
+      - SPRING_DATASOURCE_USERNAME=${MYSQL_USER}
+      - SPRING_DATASOURCE_PASSWORD=${MYSQL_PASSWORD}
+      - MERCADOPAGO_PUBLIC_KEY=${MP_PUBLIC_KEY}
+      - MERCADOPAGO_ACCESS_TOKEN=${MP_ACCESS_TOKEN}
+      - MERCADOPAGO_WEBHOOK_SECRET=${MP_WEBHOOK_SECRET}
+      - BASE_URL_SPRING=${BASE_URL_SPRING}
+    depends_on:
+      - database
+    volumes:
+      - ./uploads:/app/uploads
+
+  # --------------------------------------------------------
+  # 3. Servidor Web Apache + PHP
+  # --------------------------------------------------------
+  web:
+    image: php:8.2-apache
+    container_name: checkout_web
+    restart: always
+    ports:
+      - "${PORT_WEB}:80"
+    env_file:
+      - .env
+    environment:
+      - APP_USER=${APP_USER}
+      - APP_PASS=${APP_PASS}
+      - MP_PUBLIC_KEY=${MP_PUBLIC_KEY}
+      - BASE_URL_SPRING=${BASE_URL_SPRING}
+    volumes:
+      - ./frontend:/var/www/html
+
+  # --------------------------------------------------------
+  # 4. phpMyAdmin (Rodando em porta própria para evitar conflitos)
+  # --------------------------------------------------------
+  phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: checkout_phpmyadmin
+    restart: always
+    ports:
+      - "8082:80"
+    environment:
+      PMA_HOST: database
+      PMA_PORT: 3306
+    depends_on:
+      - database
+
+volumes:
+  db_data:
