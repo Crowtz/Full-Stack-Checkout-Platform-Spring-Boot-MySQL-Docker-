@@ -9,11 +9,24 @@ Plataforma completa de checkout e pós-venda voltada para processamento de pagam
 
 ## Demonstração
 
-[![Demonstração do Projeto] (https://www.youtube.com/watch?v=SEU_VIDEO_ID)
+Confira a aplicação em funcionamento e as principais telas da plataforma.
+
+### Vídeo Demonstrativo
+[![Assista ao vídeo](https://img.youtube.com/vi/SEU_VIDEO_ID/maxresdefault.jpg)](https://www.youtube.com/watch?v=SEU_VIDEO_ID)
+> 💡 *Clique na imagem acima para assistir ao fluxo completo no YouTube.*
+
+---
+
+### Capturas de Tela
 
 <div align="center">
-  <img src="checkout.png" alt="Tela de Checkout" width="45%">
-  <img src="dashboard.png" alt="Painel Administrativo" width="45%">
+  <p align="center">
+    <img src="checkout.png" alt="Tela de Checkout" width="48%" />
+    <img src="dashboard.png" alt="Painel Administrativo" width="48%" />
+  </p>
+  <p align="center">
+    <sub><b>Esquerda:</b> Fluxo de Checkout | <b>Direita:</b> Painel Administrativo</sub>
+  </p>
 </div>
 
 ---
